@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void printSet(multiset<string> &s){
+  // for(auto it = s.begin();it != s.end();it++){
+  //   cout << (*it) << endl;
+  // }
+  for(string value : s){
+    cout << value << endl;
+  }
+}
+
+int main(){
+  multiset<string>s;
+  s.insert("abc");
+  s.insert("dkf");
+  s.insert("deg");
+  s.insert("abc");
+  printSet(s);
+
+  auto it = s.find("abc");
+  if(it != s.end()){
+    s.erase(it);
+  }
+  printSet(s);
+}
